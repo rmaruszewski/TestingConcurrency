@@ -1,10 +1,10 @@
 package edu.marur;
 
-public class InitMeOnce {
+public class InitMeOnceSynchronized {
 
     private int value = 0;
 
-    public int init() throws InterruptedException {
+    public synchronized int init() throws InterruptedException {
         if (value == 0) {
             value++;
         }
@@ -12,7 +12,7 @@ public class InitMeOnce {
         return value;
     }
 
-    public int getValue() {
+    public synchronized int getValue() {
         return value;
     }
 }

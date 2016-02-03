@@ -1,3 +1,7 @@
+.gradle
+build
+threadsafe-html
+
 *.class
 .idea
 *.iml

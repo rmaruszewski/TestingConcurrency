@@ -1,7 +1,12 @@
 package edu.marur;
 
-public class InitMeOnce {
+import net.jcip.annotations.GuardedBy;
+import net.jcip.annotations.ThreadSafe;
 
+@ThreadSafe
+public class InitMeOnceGuardedBy {
+
+    @GuardedBy("this")
     private int value = 0;
 
     public int init() throws InterruptedException {
